@@ -1,0 +1,32 @@
+@mixin wh($fz) {
+	font-weight: 500;
+	color: $w;
+	font-size: $fz;
+}
+@mixin bh($fz) {
+	font-weight: bold;
+	color: $b;
+	font-size: $fz;
+}
+@mixin breakpoint($point) {
+	@if $point ==lg {
+		@media (max-width: 992px) {
+			@content;
+		}
+	}
+	@else if $point ==md {
+		@media (max-width: 768px) {
+			@content;
+		}
+	}
+	@else if $point ==sm {
+		@media (max-width: 576px) {
+			@content;
+		}
+	}
+	@else if $point ==xs {
+		@media (max-width: 359px) {
+			@content;
+		}
+	}
+}
